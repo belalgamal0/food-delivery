@@ -13,7 +13,7 @@ import 'features/home/domain/usecase/get_foods_usecase.dart';
 import 'package:hive/hive.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
-import 'core/network_info/network_info.dart';
+import 'core/network/network_info.dart';
 import 'features/home/presentation/bloc/home_bloc.dart';
 
 final services = GetIt.instance;
