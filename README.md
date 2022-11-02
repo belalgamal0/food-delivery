@@ -14,8 +14,8 @@ But keep in mind there is some drawback with flutter where the native platform i
 
 As for the Food Delivery app, it's based on clean architecture based on the book and blog by Uncle Bob. It is a combination of concepts taken from Onion Architecture and other architectures. The main focus of the architecture is the separation of concerns and scalability. It consists of 3 main modules: App, Domain, and Data.<br />
 Source code dependencies only point inwards. This means inward modules are neither aware of nor dependent on external modules. However, external modules are both aware of and dependent on inner modules. Outer modules represent the mechanisms by which the business rules and policies (inner modules) operate. The more you move inward, the more abstraction is present. The outer you move the more concrete implementations are present. Inner modules are not aware of any classes, functions, names, libraries, etc.. present in the outer modules. They simply represent rules and are completely independent of the implementations.<br />
-features of the app, like getting food, will be divided into 3 layers(if required) - presentation, domain, and data.<br />
-Presentation layer<br /><br />
+features of the app, like getting food, will be divided into 3 layers(if required) - presentation, domain, and data.<br /><br />
+Presentation layer<br />
 This layer contains widgets to display UI on the screen. These widgets then dispatch events to the Bloc and listen for states to be able to update UI.<br /><br />
 Domain layer<br />
 is the inner layer. It will contain only the core business logic (use cases) and business objects (entities). It's independent of every other layer. Use Cases are classes that encapsulate all the business logic of a particular use case of the app (GetFoodUseCase). And the way that the domain gets data from a Repository, which is from the data layer is accomplished with dependency inversion which is managed in this app using get_it.<br />
