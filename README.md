@@ -13,6 +13,8 @@ But keep in mind there is some drawback with flutter where the native platform i
 5- Comparing the size of the native and the Flutter app, Flutter apps appear to be heavier in size.<br />
 
 As for the Food Delivery app, it's based on clean architecture based on the book and blog by Uncle Bob. It is a combination of concepts taken from Onion Architecture and other architectures. The main focus of the architecture is the separation of concerns and scalability. It consists of 3 main modules: App, Domain, and Data.<br />
+This diagram shows the architecture and the call flow.<br />
+![0_zUtZYiJ1bDTugOYY (1)](https://user-images.githubusercontent.com/32741765/199728515-5c9f7d1e-2e0e-4a49-8eb9-a5f4e42849ce.png)
 Source code dependencies only point inwards. This means inward modules are neither aware of nor dependent on external modules. However, external modules are both aware of and dependent on inner modules. Outer modules represent the mechanisms by which the business rules and policies (inner modules) operate. The more you move inward, the more abstraction is present. The outer you move the more concrete implementations are present. Inner modules are not aware of any classes, functions, names, libraries, etc.. present in the outer modules. They simply represent rules and are completely independent of the implementations.<br />
 features of the app, like getting food, will be divided into 3 layers(if required) - presentation, domain, and data.<br /><br />
 Presentation layer<br />
